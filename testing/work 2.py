@@ -1,18 +1,27 @@
 def romanToInt(s = "MCMXCIV"):
     key = {
-        "I": 1,
-        "V": 5,
-        "X": 10,
-        "L": 50,
-        "C": 100,
+        "M": 1000,
         "D": 500,
-        "M": 1000
+        "C": 100,
+        "L": 50,
+        "X": 10,
+        "V": 5,
+        "I": 1
     }
 
-    index = list(key.keys()).index("L") + 1  
-    total = 0
+    
+    total, prev_index = 0, 0
     for _ in s:
-        total += key[_]
+        index = list(key.keys()).index(_)
+        print(index)
+        if index >= prev_index:
+            total += key[_]
+            print("total: ", total)
+        else:
+            pass
+        prev_index = index
+        
+        
         
 
 
