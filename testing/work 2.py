@@ -1,21 +1,21 @@
-def isPalindrome(x=12321):
-    b = [[_ for _ in str(x)][_] for _ in range(len([_ for _ in str(x)])-1, -1, -1)]
-    y = "".join(b)
-    print(str(x) == str(y), x == y)
+def isPalindrome(x):
+ 
+    first, second_list, reversed_list, final_string = x, [], [], ""
+
+    for _ in range(len(str(x))):
+        second_list.append(str(x)[_])
 
     
-#isPalindrome()
-x = 123
+    for _ in range(len(second_list) - 1, -1, -1):
+        reversed_list.append(second_list[_])
+
+    for _ in reversed_list:
+        final_string += _
+
+    second = int(final_string)
 
 
-def isPalindrome(x):
-    first, second = x, 0
-    while x > 0: second = second * 10 + x % 10; x //= 10
+
     return first == second
 
-#print(isPalindrome(121))
-
-def l(x):
-    return str(x) == str(x)[::-1]
-
-print(l(3314133))
+print(isPalindrome(23432))
