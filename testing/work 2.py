@@ -8,11 +8,13 @@ def romanToInt(s = "MCMXCIV"):
         "D": 500,
         "M": 1000
     }
+
+    index = list(key.keys()).index("L") + 1  
     total = 0
     for _ in s:
         total += key[_]
         
 
-    print(total)
 
+    print(total)
 romanToInt()

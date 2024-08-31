@@ -1,10 +1,14 @@
-# Example dictionary
-my_dict = {'a': 1, 'b': 2, 'c': 3}
+key = {
+    "I": 1,
+    "V": 5,
+    "X": 10,
+    "L": 50,
+    "C": 100,
+    "D": 500,
+    "M": 1000
+}
 
-# Printing the indexes (keys)
-for key in my_dict:
-    print(key)
+keys_list = list(key.keys())
 
-# Get the keys as a list
-keys_list = list(my_dict.keys())
-print(keys_list)
+index_of_L = keys_list.index("L") + 1  
+print(f"The position of 'L' is: {index_of_L}")
