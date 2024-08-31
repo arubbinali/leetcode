@@ -6,6 +6,16 @@ def isPalindrome(x=12321):
     
 #isPalindrome()
 x = 123
-y = 0
-while x > 0:
-    y = y * 10 + x % 10; x //= 10
+
+
+def isPalindrome(x):
+    first, second = x, 0
+    while x > 0: second = second * 10 + x % 10; x //= 10
+    return first == second
+
+#print(isPalindrome(121))
+
+def l(x):
+    return str(x) == str(x)[::-1]
+
+print(l(3314133))
