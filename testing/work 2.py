@@ -8,7 +8,4 @@ def isPalindrome(x=12321):
 x = 123
 y = 0
 while x > 0:
-    y = y * 10 + x % 10
-    x //= 10
-    print(x, y)
-#print(y)
+    y = y * 10 + x % 10; x //= 10
