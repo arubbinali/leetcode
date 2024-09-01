@@ -9,7 +9,6 @@ def romanToInt(s = "MCMXCIV"):
         "I": 1
     }
 
-    
     total, prev_index = 0, 0
     for _ in s:
         index = list(key.keys()).index(_)
@@ -20,7 +19,6 @@ def romanToInt(s = "MCMXCIV"):
         else:
             pass
         prev_index = index
-        
         
     print(total)
 romanToInt()
