@@ -22,8 +22,5 @@ def romanToInt(s = "MCMXCIV"):
         prev_index = index
         
         
-        
-
-
     print(total)
 romanToInt()
