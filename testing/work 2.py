@@ -12,10 +12,9 @@ def romanToInt(s = "MCMXCIV"):
     total, prev_index = 0, 0
     for _ in s:
         index = list(key.keys()).index(_)
-        print(index)
         if index >= prev_index:
             total += key[_]
-            print("total: ", total)
+            print(index, "total: ", total)
         else:
             pass
         prev_index = index
