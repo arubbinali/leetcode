@@ -1,7 +1,13 @@
-num = int(input("List length:   "))
-numbers = [int(input()) for _ in range(num)]
-key = int(input("Enter the key element:   "))
-for _ in range(len(numbers)):
-    if numbers[_] == key:
-        print(f"Element found in location {_ + 1}")
-        break
+List = [21, 35, 4, 7, 8, 5, 1, 20]
+key = 5
+
+def search(list, key):
+    key = int(input("Enter the key element:   "))
+    for _ in range(len(list)):
+        if list[_] == key:
+            print(f"Element found in location {_ + 1}")
+            break
+    else:
+        print("Element not found")
+
+search(List, key)
