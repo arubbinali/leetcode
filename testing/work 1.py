@@ -6,6 +6,6 @@ def search(list, key):
         if list[_] == key:
             print(f"Element found in location {_ + 1}")
             break
-    else:
-        
+    else: print("Element not found")
 
+search(List, 8)
