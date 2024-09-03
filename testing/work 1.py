@@ -1,5 +1,3 @@
-
-
 num = int(input("List length:   "))
 numbers = [int(input()) for _ in range(num)]
 key = int(input("Enter the key element:   "))
