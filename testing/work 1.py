@@ -13,3 +13,5 @@ item = int(input("Enter number to be found:   "))
 found = False
 for index in range(len(myList)):
     if item == myList[index]: found = True
+if found: print("item found")
+else: print("item not found")
