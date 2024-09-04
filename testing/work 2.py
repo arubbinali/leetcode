@@ -3,7 +3,5 @@ def romanToInt(s):
     values = [5, 10, 50, 100, 500, 1000]
     total = 0
 
-    
-
 
 romanToInt("")
