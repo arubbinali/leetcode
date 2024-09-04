@@ -10,10 +10,11 @@ def romanToInt(s):
             index_of_prev_letter = index_of_letter - 1
             value_of_prev_letter = values[index_of_prev_letter]
             
-        print(index_of_letter, value_of_letter)
-        print(index_of_prev_letter, value_of_prev_letter)
+        print("current:   ", index_of_letter, value_of_letter)
+        try: print("prev:   ", index_of_prev_letter, value_of_prev_letter)
+        except: print("no val")
 
 
     
 
-romanToInt("III")
+romanToInt("MI")
