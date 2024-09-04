@@ -10,9 +10,9 @@ def romanToInt(s):
             index_of_prev_letter = index_of_letter - 1
             value_of_prev_letter = values[index_of_prev_letter]
             
-        print("current:   ", index_of_letter, value_of_letter)
-        try: print("prev:   ", index_of_prev_letter, value_of_prev_letter)
-        except: print("no val")
+        print("current:   ", numericals[index_of_letter], index_of_letter, value_of_letter)
+        try: print("prev:      ", numericals[index_of_prev_letter], index_of_prev_letter, value_of_prev_letter, "\n")
+        except: print("prev:       no val", "\n")
 
 
     
