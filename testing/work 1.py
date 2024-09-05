@@ -1,8 +1,14 @@
-def linear_search(arr, x):
-    for i in range(len(arr)):
-        if arr[i] == x:
-            return i
+def binary_search(arr, x):
+    low, high = 0, len(arr) - 1
+    while low <= high:
+        mid = (low + high) // 2
+        if arr[mid] == x:
+            return mid
+        elif arr[mid] < x:
+            low = mid + 1
+        else:
+            high = mid - 1
     return -1
 
-arr = [3, 5, 2, 8, 6]
-print(linear_search(arr, 8))  # Output: 3
+arr = [2, 3, 5, 6, 8]
+print(binary_search(arr, 5))  # Output: 2
