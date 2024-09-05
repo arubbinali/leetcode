@@ -52,8 +52,17 @@ class LinkedList():
     def __init__(self):
         self.head = None
 
-    def append():
-        pass
+    def append(self, value):
+        new_node = Node(value)
+        if self.head:
+            last = self.head
+            while last.next:
+                last = last.next
+            print(last.next)
+            last.next = new_node
+        else:
+            self.head - new_node
         
-    def display():
-        pass
+    def display(self):
+        current = self.head
+        
