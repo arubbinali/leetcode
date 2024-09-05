@@ -9,7 +9,14 @@ def linear_search(numbers, number):
 
 
 
-#           2, 3, 5, 6, 8
+#bubble sort
+def bubble_sort(numbers):
+    for _ in range(len(numbers)):
+        for __ in range(len(numbers) - _ - 1):
+            if numbers[__] > numbers[__ + 1]:
+                numbers[__], numbers[__ + 1] = numbers[__ + 1], numbers[__]
+
+    return numbers
 
 def binary_search(unsorted_numbers, number):
     numbers = bubble_sort(unsorted_numbers)
@@ -19,18 +26,15 @@ def binary_search(unsorted_numbers, number):
         mid = (low + high) // 2
         if numbers[mid] == number:
             return mid
-        elif numbers[mid] < number:
-            pass
-        else:pass
-            
-#bubble sort
-def bubble_sort(numbers):
-    for _ in range(len(numbers)):
-        for __ in range(len(numbers) - _ - 1):
-            if numbers[__] > numbers[__ + 1]:
-                numbers[__], numbers[__ + 1] = numbers[__ + 1], numbers[__]
+        elif numbers[mid] > number:
+            high -= 1
+        else:
+            low += 1
 
-    return numbers
+print(binary_search([[3, 5, 2, 8, 6]], 3))
+
+            
+
 
 #insertion sort
 
