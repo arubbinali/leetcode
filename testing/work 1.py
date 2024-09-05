@@ -44,6 +44,6 @@ def binary_search(unsorted_numbers, number):
 
 #linked list ()
 class Node():
-    def __init__(self):
-        self.head = None
+    def __init__(self, data):
+        self.data = data
         self.next = None
