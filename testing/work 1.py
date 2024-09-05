@@ -16,6 +16,8 @@ def insertion_sort(numbers):
             numbers[index_of_prev_number + 1] = numbers[index_of_prev_number]
             index_of_prev_number -= 1
         numbers[index_of_prev_number + 1] = number
+        
+    return numbers
 
 #linear search
 def linear_search(numbers, number):
