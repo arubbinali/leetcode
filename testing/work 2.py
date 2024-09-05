@@ -13,8 +13,6 @@ def romanToInt(s):
             if True:
                 total += value_of_letter
             
-        
-
         print("current:   ", numericals[index_of_letter], index_of_letter, value_of_letter)
         try: print("prev:      ", numericals[index_of_prev_letter], index_of_prev_letter, value_of_prev_letter, "\n")
         except: print("prev:       no val")
