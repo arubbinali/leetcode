@@ -66,7 +66,7 @@ class LinkedList():
     def display(self):
         current = self.head
         while current:
-            print(current.element, end = " ---> ")
+            print(current.element, end = " -> ")
             current = current.next
         print("None")
 
