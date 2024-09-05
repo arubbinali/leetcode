@@ -9,6 +9,7 @@ def linear_search(numbers, number):
 
 
 
+#           2, 3, 5, 6, 8
 
 def binary_search(unsorted_numbers, number):
     numbers = bubble_sort(unsorted_numbers)
