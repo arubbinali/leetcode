@@ -24,6 +24,7 @@ def binary_search(unsorted_numbers, number):
     low, high = 0, len(numbers) - 1
     while low <= high:
         mid = (low + high) // 2
+        print(number, numbers, numbers[mid], mid)
         if numbers[mid] == number:
             return mid
         elif numbers[mid] > number:
