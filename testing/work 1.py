@@ -8,6 +8,8 @@ def bubble_sort(numbers):
     return numbers
 
 #insertion sort
+def insertion_sort(numbers):
+    pass
 
 #linear search
 def linear_search(numbers, number):
