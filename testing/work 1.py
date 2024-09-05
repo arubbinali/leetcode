@@ -70,4 +70,10 @@ class LinkedList():
             current = current.next
         print("None")
 
+linked_list = LinkedList()
+linked_list.append(4)
+linked_list.append(9)
+linked_list.append(2)
+linked_list.append(-19)
+linked_list.display()
     
