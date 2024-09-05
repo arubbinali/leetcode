@@ -39,7 +39,11 @@ def binary_search(unsorted_numbers, number):
             high = mid - 1
         else:
             low = mid + 1
-            
+
     return f"{number} is not in the list"
 
 #linked list ()
+class Node():
+    def __init__(self):
+        self.head = None
+        self.next = None
