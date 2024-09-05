@@ -1,10 +1,4 @@
-#linear search
-def linear_search(numbers, number):
-    for _ in range(len(numbers)):
-        if numbers[_] == number:
-            return f"{number} is at index {_} in the list"
-    return f"{number} is not in the list"
-        
+       
 #print(linear_search([3, 5, 2, 8, 6], 5))
 
 
@@ -26,11 +20,11 @@ def binary_search(unsorted_numbers, number):
         if numbers[mid] == number:
             return mid
         elif numbers[mid] > number:
-            high -= 1
+            high = mid - 1
         else:
-            low += 1
-
-print(binary_search([3, 5, 2, 8, 6], 3))
+            low = mid + 1
+    return -1
+print(binary_search([3, 5, 2, 8, 6], 8))
 
             
 
