@@ -20,11 +20,9 @@ def bubble_sort(numbers):
 
 def binary_search(unsorted_numbers, number):
     numbers = bubble_sort(unsorted_numbers)
-    print(numbers)
     low, high = 0, len(numbers) - 1
     while low <= high:
         mid = (low + high) // 2
-        print(number, numbers, numbers[mid], mid)
         if numbers[mid] == number:
             return mid
         elif numbers[mid] > number:
@@ -32,7 +30,7 @@ def binary_search(unsorted_numbers, number):
         else:
             low += 1
 
-print(binary_search([[3, 5, 2, 8, 6]], 3))
+print(binary_search([3, 5, 2, 8, 6], 3))
 
             
 
