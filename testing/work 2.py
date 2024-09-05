@@ -5,19 +5,19 @@ def romanToInt(s):
     for _ in s:
         index_of_letter = numericals.index(_)
         value_of_letter = values[index_of_letter]
-        
+
         if index_of_letter > 0:
             index_of_prev_letter = index_of_letter - 1
             value_of_prev_letter = values[index_of_prev_letter]
+
+            if True:
+                total += value_of_letter
             
         
 
         print("current:   ", numericals[index_of_letter], index_of_letter, value_of_letter)
         try: print("prev:      ", numericals[index_of_prev_letter], index_of_prev_letter, value_of_prev_letter, "\n")
-        except: print("prev:       no val", "\n")
-    
-        if 
-        total += value_of_letter
-        print(total)
+        except: print("prev:       no val")
+        print(total, "\n")
 
 romanToInt("MCM")
