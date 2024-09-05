@@ -1,14 +1,9 @@
-def binary_search(arr, x):
-    low, high = 0, len(arr) - 1
-    while low <= high:
-        mid = (low + high) // 2
-        if arr[mid] == x:
-            return mid
-        elif arr[mid] < x:
-            low = mid + 1
-        else:
-            high = mid - 1
-    return -1
+def bubble_sort(arr):
+    for i in range(len(arr)):
+        for j in range(0, len(arr) - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
 
-arr = [2, 3, 5, 6, 8]
-print(binary_search(arr, 8))  # Output: 2
+arr = [8, 5, 3, 6, 2]
+bubble_sort(arr)
+print(arr)  # Output: [2, 3, 5, 6, 8]
