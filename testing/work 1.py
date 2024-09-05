@@ -33,12 +33,11 @@ def binary_search(unsorted_numbers, number):
     while low <= high:
         mid = (low + high) // 2
         if numbers[mid] == number:
-            return mid
+            return f"{number} is at index {mid} in the list"
         elif numbers[mid] > number:
             high = mid - 1
         else:
             low = mid + 1
-    return -1
-print(binary_search([3, 5, 2, 8, 6], 8))
+    return f"{number} is not in the list"
 
 #linked list ()
