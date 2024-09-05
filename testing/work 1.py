@@ -42,7 +42,7 @@ def binary_search(unsorted_numbers, number):
 
     return f"{number} is not in the list"
 
-#linked list ()
+#linked list
 class Node():
     def __init__(self, element):
         self.element = element
