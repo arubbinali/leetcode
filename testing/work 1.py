@@ -44,8 +44,8 @@ def binary_search(unsorted_numbers, number):
 
 #linked list ()
 class Node():
-    def __init__(self, data):
-        self.data = data
+    def __init__(self, element):
+        self.element = element
         self.next = None
     
 class LinkedList():
@@ -65,4 +65,5 @@ class LinkedList():
         
     def display(self):
         current = self.head
-        
+        while current:
+            print(current.element)
