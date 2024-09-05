@@ -5,7 +5,7 @@ def romanToInt(s):
     for _ in s:
         index_of_letter = numericals.index(_)
         value_of_letter = values[index_of_letter]
-
+        
         if index_of_letter > 0:
             index_of_prev_letter = index_of_letter - 1
             value_of_prev_letter = values[index_of_prev_letter]
