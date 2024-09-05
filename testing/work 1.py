@@ -61,7 +61,7 @@ class LinkedList():
             print(last.next)
             last.next = new_node
         else:
-            self.head - new_node
+            self.head = new_node
         
     def display(self):
         current = self.head
