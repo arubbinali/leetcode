@@ -16,6 +16,8 @@ def romanToInt(s):
         try: print("prev:      ", numericals[index_of_prev_letter], index_of_prev_letter, value_of_prev_letter, "\n")
         except: print("prev:       no val", "\n")
     
+        if 
         total += value_of_letter
         print(total)
-romanToInt("MDCLXVI")
+
+romanToInt("MCM")
