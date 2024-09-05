@@ -70,9 +70,8 @@ class LinkedList():
         print("None")
 
 linked_list = LinkedList()
-linked_list.append(4)
-linked_list.append(9)
-linked_list.append(2)
-linked_list.append(-19)
+
+for _ in range(int(input("Enter number of nodes you'd want to add:   "))):
+    linked_list.append(int(input("Enter node value:   ")))
+
 linked_list.display()
-    
