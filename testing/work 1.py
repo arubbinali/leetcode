@@ -1,31 +1,9 @@
-class Node:
-    def __init__(self, data):
-        self.data = data
-        self.next = None
+#linear search
+def linear_search(numbers, number):
+    for _ in range(len(numbers)):
+        if numbers[_] == number:
+            return f"{number} is at index {_} in the list"
+    return f"{number} is not in the list"
+        
+#print(linear_search([3, 5, 2, 8, 6], 1))
 
-class LinkedList:
-    def __init__(self):
-        self.head = None
-
-    def append(self, data):
-        new_node = Node(data)
-        if not self.head:
-            self.head = new_node
-        else:
-            last = self.head
-            while last.next:
-                last = last.next
-            last.next = new_node
-
-    def display(self):
-        current = self.head
-        while current:
-            print(current.data, end=" -> ")
-            current = current.next
-        print("None")
-
-ll = LinkedList()
-ll.append(5)
-ll.append(3)
-ll.append(8)
-ll.display()  # Output: 5 -> 3 -> 8 -> None
