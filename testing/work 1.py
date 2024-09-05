@@ -1,8 +1,3 @@
-       
-#print(linear_search([3, 5, 2, 8, 6], 5))
-
-
-
 #bubble sort
 def bubble_sort(numbers):
     for _ in range(len(numbers)):
@@ -12,6 +7,16 @@ def bubble_sort(numbers):
 
     return numbers
 
+#insertion sort
+
+#linear search
+def linear_search(numbers, number):
+    for _ in range(len(numbers)):
+        if numbers[_] == number:
+            return f"{number} is at index {_} in the list"
+    return f"{number} is not in the list"
+
+#binary search
 def binary_search(unsorted_numbers, number):
     numbers = bubble_sort(unsorted_numbers)
     low, high = 0, len(numbers) - 1
@@ -25,10 +30,5 @@ def binary_search(unsorted_numbers, number):
             low = mid + 1
     return -1
 print(binary_search([3, 5, 2, 8, 6], 8))
-
-            
-
-
-#insertion sort
 
 #linked list ()
