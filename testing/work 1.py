@@ -24,6 +24,7 @@ def linear_search(numbers, number):
     for _ in range(len(numbers)):
         if numbers[_] == number:
             return f"{number} is at index {_} in the list"
+        
     return f"{number} is not in the list"
 
 #binary search
@@ -38,6 +39,7 @@ def binary_search(unsorted_numbers, number):
             high = mid - 1
         else:
             low = mid + 1
+            
     return f"{number} is not in the list"
 
 #linked list ()
