@@ -11,6 +11,7 @@ def romanToInt(s):
             value_of_prev_letter = values[index_of_prev_letter]
 
             if True:
+                
                 total += value_of_letter
             
         print("current:   ", numericals[index_of_letter], index_of_letter, value_of_letter)
