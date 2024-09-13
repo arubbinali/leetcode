@@ -1,77 +1,22 @@
-#bubble sort
-def bubble_sort(numbers):
-    for _ in range(len(numbers)):
-        for __ in range(len(numbers) - _ - 1):
-            if numbers[__] > numbers[__ + 1]:
-                numbers[__], numbers[__ + 1] = numbers[__ + 1], numbers[__]
+def romanToInt(s):
+    numericals = ["M", "D", "C", "L", "X", "V", "I"]
+    values = [1000, 500, 100, 50, 10, 5, 1]
+    total = 0
+    index_of_prev_letter = 0
+    for _ in s:
+        index_of_letter = numericals.index(_)
+        value_of_letter = values[index_of_letter]
 
-    return numbers
+        if index_of_letter > 0:
+            index_of_prev_letter = index_of_letter - 1
+            value_of_prev_letter = values[index_of_prev_letter]
 
-#insertion sort
-def insertion_sort(numbers):
-    for _ in range(1, len(range(numbers))):
-        number = numbers[_]
-        index_of_prev_number = _ - 1
-        while index_of_prev_number >= 0 and number < numbers[index_of_prev_number]:
-            numbers[index_of_prev_number + 1] = numbers[index_of_prev_number]
-            index_of_prev_number -= 1
-        numbers[index_of_prev_number + 1] = number
-        
-    return numbers
+            if index_of_letter > index_of_prev_letter:
+                total += value_of_letter
+            
+        print("current:   ", numericals[index_of_letter], index_of_letter, value_of_letter)
+        try: print("prev:      ", numericals[index_of_prev_letter], index_of_prev_letter, value_of_prev_letter, "\n")
+        except: print("prev:       no val")
+        print(total, "\n")
 
-#linear search
-def linear_search(numbers, number):
-    for _ in range(len(numbers)):
-        if numbers[_] == number:
-            return f"{number} is at index {_} in the list"
-        
-    return f"{number} is not in the list"
-
-#binary search
-def binary_search(unsorted_numbers, number):
-    numbers = bubble_sort(unsorted_numbers)
-    low, high = 0, len(numbers) - 1
-    while low <= high:
-        mid = (low + high) // 2
-        if numbers[mid] == number:
-            return f"{number} is at index {mid} in the list"
-        elif numbers[mid] > number:
-            high = mid - 1
-        else:
-            low = mid + 1
-
-    return f"{number} is not in the list"
-
-#linked list
-class Node():
-    def __init__(self, element):
-        self.element = element
-        self.next = None
-    
-class LinkedList():
-    def __init__(self):
-        self.head = None
-
-    def append(self, value):
-        new_node = Node(value)
-        if self.head:
-            last = self.head
-            while last.next:
-                last = last.next
-            last.next = new_node
-        else:
-            self.head = new_node
-        
-    def display(self):
-        current = self.head
-        while current:
-            print(current.element, end = " -> ")
-            current = current.next
-        print("None")
-
-linked_list = LinkedList()
-
-for _ in range(int(input("Enter number of nodes you'd want to add:   "))):
-    linked_list.append(int(input("Enter node value:   ")))
-
-linked_list.display()
+romanToInt("MCM")
